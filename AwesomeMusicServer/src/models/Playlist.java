@@ -1,17 +1,8 @@
 package models;
 
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Map;
 
-import org.apache.commons.io.FileUtils;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 /**
  *	The Playlist class holds a list of String objects
  */

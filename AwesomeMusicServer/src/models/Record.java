@@ -1,7 +1,5 @@
 package models;
 
-import javafx.beans.property.SimpleStringProperty;
-
 public class Record {
 
 	private Artist artist;
