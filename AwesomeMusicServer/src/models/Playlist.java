@@ -118,10 +118,10 @@ public void setUser_id(int user_id) {
 		return playlist;
 	}
 
-/**
- * Gets the playlist name
- * @return playlistName
- */
+	/**
+	 * Gets the playlist name
+	 * @return playlistName
+	 */
 	public String getPlaylistName() {
 		return playlistName;
 	}
@@ -134,22 +134,6 @@ public void setUser_id(int user_id) {
 			return user_id;
 		}
 
-/**
- * Gets a sorted playlist by song title
- * @return Sort.sortListBySong(playlist) is a sorted playlist
- */
-	public ArrayList<String> sortSong(Map<String, Record> map){
-		return Sort.sortListBySong(playlist, map);
-	}
-	
-/**
- * Gets a sorted playlist by artist name
- * @return Sort.sortListBySong(playlist) is a sorted playlist
- */
-	public ArrayList<String> sortArtist(Map<String, Record> map){
-		return Sort.sortListByArtist(playlist, map);
-	}
-	
 	public Record getRecord(String id,Map<String, Record> sl) {
 		return sl.get(id);
 	}
