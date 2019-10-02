@@ -7,6 +7,8 @@
 	<classpathentry kind="lib" path="lib/json-smart-2.0-RC3.jar"/>
 	<classpathentry kind="lib" path="lib/jsonrpc2-base-1.38.1.jar"/>
 	<classpathentry kind="lib" path="lib/jsonrpc2-server-1.11.jar"/>
-	<classpathentry kind="lib" path="/AwesomeMusic/lib/gson-2.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/gson-2.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/commons-io-2.6.jar"/>
+	<classpathentry kind="lib" path="lib/jl1.0.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
