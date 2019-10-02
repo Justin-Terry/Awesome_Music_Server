@@ -7,5 +7,6 @@
 	<classpathentry kind="lib" path="lib/json-smart-2.0-RC3.jar"/>
 	<classpathentry kind="lib" path="lib/jsonrpc2-base-1.38.1.jar"/>
 	<classpathentry kind="lib" path="lib/jsonrpc2-server-1.11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Christian/Documents/CECS327/bin/AwesomeMusic/lib/gson-2.6.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
