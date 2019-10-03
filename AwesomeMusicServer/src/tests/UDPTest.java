@@ -24,12 +24,19 @@ public class UDPTest {
 //                                         			   "\"password\" : \"password\"}" +
 //                                         "}");
             // signUpUser Example
-        	response = client.sendRequest("{\"remoteMethod\":\"signUpUser\"," +
-                    			    "\"objectName\": \"LoginServices\"," +
-                    			    "\"param\" : {\"name\" : \"Justin Terry\"," +
-                    			    			 "\"email\" : \"foobbar@email.com\", " +
-                    			    			 "\"password\" : \"password\"}" +
-                    				"}");
+//        	response = client.sendRequest("{\"remoteMethod\":\"z\"," +
+//                    			    "\"objectName\": \"LoginServices\"," +
+//                    			    "\"param\" : {\"name\" : \"Justin Terry\"," +
+//                    			    			 "\"email\" : \"foobbar@email.com\", " +
+//                    			    			 "\"password\" : \"password\"}" +
+//                    				"}");
+        	// searchForSong Example
+        	// If page is empty, the return will be an empty array i.e. {"ret": "[]"}
+        	response = client.sendRequest("{\"remoteMethod\":\"searchForSong\"," +
+						    			   "\"objectName\": \"SongLibraryServices\"," +
+						    			   "\"param\" : {\"searchParam\" : \"the\"," +
+						    			   			    "\"pageNumber\" : \"1\"} " +
+						    			  "}");
         	System.out.println(response);
         } catch (IOException e1) {
             // TODO Auto-generated catch block

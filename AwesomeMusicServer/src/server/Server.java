@@ -52,7 +52,7 @@ public class Server extends Thread {
 			// Create an instance of the dispatcher and pass it the request
 			Dispatcher dis = new Dispatcher();
 			String returnString = dis.dispatch(new String(packet.getData()));
-
+			System.out.println(returnString.length() + " " + returnString);
 			// Add the returned string to the buffer
 			buf = returnString.getBytes();
 			// Create the return packet

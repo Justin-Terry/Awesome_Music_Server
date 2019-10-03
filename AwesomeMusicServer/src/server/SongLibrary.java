@@ -9,6 +9,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 
 import org.apache.commons.io.FileUtils;
@@ -198,6 +199,10 @@ public class SongLibrary {
 		}
 
 		isReady = true;
+	}
+	
+	public Set<String> getKeySet() {
+		return songLibrary.keySet();
 	}
 
 	/**

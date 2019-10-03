@@ -4,37 +4,41 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class SongItem {
 	
-	private SimpleStringProperty title;
-	private SimpleStringProperty id;
-	private SimpleStringProperty artist;
-	private SimpleStringProperty record;
+	private String title;
+	private String id;
+	private String artist;
+	private String record;
     
     public SongItem(String title, String artist, String id, String record) {
-    	this.title = new SimpleStringProperty(title);	
-		this.id = new SimpleStringProperty(id);
-		this.artist = new SimpleStringProperty(artist);
-		this.record = new SimpleStringProperty(record);
+    	this.title = new String(title);	
+		this.id = new String(id);
+		this.artist = new String(artist);
+		this.record = new String(record);
 	}
+    
+    public String toJsonString() {
+    	return "{" + "\"title\":\"" + title + "\", \"artist\":\"" + artist +"\",\"id\":\"" + id + "\", \"recordName\" : \"" + record + "\"}";
+    }
 
 	@Override
 	public String toString() {
-		return "Song [title=" + title.getValue() + ", artist=" + artist.getValue() +  ", id=" + id.getValue() + "]";
+		return "Song [title=" + title + ", artist=" + artist +  ", id=" + id + "]";
 	}
 
 	public String getTitle() {
-		return title.get();
+		return title;
 	}
 
 	public String getId() {
-		return id.get();
+		return id;
 	}
 
 	public String getArtist() {
-		return artist.get();
+		return artist;
 	}
 
 	public String getRecord() {
-		return record.get();
+		return record;
 	}
 
 
