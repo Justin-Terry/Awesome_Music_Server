@@ -100,7 +100,8 @@ public class LoginServices {
 			file.append(gson.toJson(newUserJSON));
 
 			file.close();
-
+			
+			System.out.println("New user " + newUser.getEmail() + " was created.");
 			return new Gson().toJson(newUser);
 		} catch (Exception e) {
 
