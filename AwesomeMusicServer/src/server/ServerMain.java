@@ -7,9 +7,7 @@ public class ServerMain {
 		SongLibrary.getInstance();
 		// Start the server
 		new Server().start();
-		
-		SongLibraryServices sls = new SongLibraryServices();
-		System.out.println(sls.searchForSong("The", "1"));
+
 	}
 
-}
+};

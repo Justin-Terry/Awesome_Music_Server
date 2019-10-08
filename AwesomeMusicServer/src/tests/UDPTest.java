@@ -61,14 +61,21 @@ public class UDPTest {
 //			   							   "\"param\" : {\"userId\" : \"1\"} " +
 //			  							  "}");
         	
+//        	// Delete a playlist
+//        	response = client.sendRequest("{\"remoteMethod\":\"removePlaylist\"," +
+//									   	   "\"objectName\": \"PlaylistServices\"," +
+//									       "\"param\" : {\"playlistname\" : \"Best Songs!\"," +
+//									   					"\"userId\" : \"1\"} " +
+//									       "}");
+        	
         	// Delete a playlist
-        	response = client.sendRequest("{\"remoteMethod\":\"removePlaylist\"," +
-									   	   "\"objectName\": \"PlaylistServices\"," +
-									       "\"param\" : {\"playlistname\" : \"Best Songs!\"," +
-									   					"\"userId\" : \"1\"} " +
+        	response = client.sendRequest("{\"remoteMethod\":\"getSongChunk\"," +
+									   	   "\"objectName\": \"SongServices\"," +
+									       "\"param\" : {\"song\" : " + 490183 + "," +
+									   					"\"fragment\" : " + 1 + "} " +
 									       "}");
         	
-        	System.out.println(response);
+        	System.out.println("Response sent: \n" + response);
         } catch (IOException e1) {
             // TODO Auto-generated catch block
             e1.printStackTrace();
