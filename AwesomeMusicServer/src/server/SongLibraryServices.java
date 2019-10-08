@@ -1,7 +1,6 @@
 package server;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import com.google.gson.Gson;
 

@@ -32,11 +32,36 @@ public class UDPTest {
 //                    				"}");
         	// searchForSong Example
         	// If page is empty, the return will be an empty array i.e. {"ret": "[]"}
-        	response = client.sendRequest("{\"remoteMethod\":\"searchForSong\"," +
-						    			   "\"objectName\": \"SongLibraryServices\"," +
-						    			   "\"param\" : {\"searchParam\" : \"the\"," +
-						    			   			    "\"pageNumber\" : \"1\"} " +
-						    			  "}");
+//        	response = client.sendRequest("{\"remoteMethod\":\"searchForSong\"," +
+//						    			   "\"objectName\": \"SongLibraryServices\"," +
+//						    			   "\"param\" : {\"searchParam\" : \"search string\"," +
+//						    			   			    "\"pageNumber\" : \"1\"} " +
+//						    			  "}");
+        	
+//        	response = client.sendRequest("{\"remoteMethod\":\"createPlaylist\"," +
+//	    			   "\"objectName\": \"PlaylistServices\"," +
+//	    			   "\"param\" : {\"playlistname\" : \"Test Playlist\"," +
+//		   			   				"\"userId\" : \"1\"} " +
+//        			   "}");
+        	
+//        	response = client.sendRequest("{\"remoteMethod\":\"addSongToPlaylist\"," +
+//	    			   "\"objectName\": \"PlaylistServices\"," +
+//	    			   "\"param\" : {\"userId\" : \"1\"," +
+//		   			   				"\"playlistName\" : \"Test Playlist\"," +
+//		   			   				"\"songId\" : \"SOEIJSK12AB0183835\"} " +
+//     			   "}");
+        	
+//        	response = client.sendRequest("{\"remoteMethod\":\"getPlaylists\"," +
+//			   "\"objectName\": \"PlaylistServices\"," +
+//			   "\"param\" : {\"userId\" : " + 1 + "} " +
+//			  "}");
+        	
+        	response = client.sendRequest("{\"remoteMethod\":\"removePlaylist\"," +
+			   "\"objectName\": \"PlaylistServices\"," +
+			   "\"param\" : {\"playlistname\" : \"Best Songs!\"," +
+			   				"\"userId\" : \"1\"} " +
+			   "}");
+        	
         	System.out.println(response);
         } catch (IOException e1) {
             // TODO Auto-generated catch block

@@ -1,7 +1,5 @@
 package models;
 
-import javafx.beans.property.SimpleStringProperty;
-
 public class SongItem {
 	
 	private String title;
