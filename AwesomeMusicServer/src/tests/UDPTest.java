@@ -36,9 +36,16 @@ public class UDPTest {
         	// If page is empty, the return will be an empty array i.e. {"ret": "[]"}
 //        	response = client.sendRequest("{\"remoteMethod\":\"searchForSong\"," +
 //						    			   "\"objectName\": \"SongLibraryServices\"," +
-//						    			   "\"param\" : {\"searchParam\" : \"search string\"," +
+//						    			   "\"param\" : {\"searchParam\" : \" \"," +
 //						    			   			    "\"pageNumber\" : \"1\"} " +
 //						    			  "}");
+        	
+        	// Search the song library by song.id
+        	// Returns a SongItem object ret : {SongItem}
+        	response = client.sendRequest("{\"remoteMethod\":\"searchForSongById\"," +
+						    			  "\"objectName\": \"SongLibraryServices\"," +
+						    			  "\"param\" : {\"searchParam\" : \"SOMMAMA12A8C13F9E7\"}" +
+						    			  "}");
         	
         	// Create a new Playlist
 //        	response = client.sendRequest("{\"remoteMethod\":\"createPlaylist\"," +
@@ -69,11 +76,11 @@ public class UDPTest {
 //									       "}");
         	
         	// Delete a playlist
-        	response = client.sendRequest("{\"remoteMethod\":\"getSongChunk\"," +
-									   	   "\"objectName\": \"SongServices\"," +
-									       "\"param\" : {\"song\" : " + 490183 + "," +
-									   					"\"fragment\" : " + 1 + "} " +
-									       "}");
+//        	response = client.sendRequest("{\"remoteMethod\":\"getSongChunk\"," +
+//									   	   "\"objectName\": \"SongServices\"," +
+//									       "\"param\" : {\"song\" : " + 490183 + "," +
+//									   					"\"fragment\" : " + 1 + "} " +
+//									       "}");
         	
         	System.out.println("Response sent: \n" + response);
         } catch (IOException e1) {

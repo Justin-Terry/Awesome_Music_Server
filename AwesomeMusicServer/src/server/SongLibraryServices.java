@@ -24,8 +24,6 @@ public class SongLibraryServices {
 				Record record = mSongLibrary.getRecord(recordId);
 				if(record.getArtist().getName().contains(searchParam) || record.getSong().getTitle().contains(searchParam)) {
 					items.add(new SongItem(record.getSong().getTitle(), record.getArtist().getName(), record.getSong().getId(), record.getRelease().getName()));
-					//sb.append(new SongItem(record.getSong().getTitle(), record.getArtist().getName(), record.getSong().getId(), record.getRelease().getName()).toJsonString());
-
 				}			
 			}
 			
@@ -38,6 +36,23 @@ public class SongLibraryServices {
 			}
 			
 			sb.append("]");
+			return sb.toString();
+		}
+		
+		public String searchForSongById(String searchParam) {
+			ArrayList<SongItem> items = new ArrayList<SongItem>();
+			StringBuilder sb = new StringBuilder();
+			
+			for(String recordId : mSongLibrary.getKeySet()) {
+				Record record = mSongLibrary.getRecord(recordId);
+				if(record.getSong().getId().equals(searchParam)) {
+					items.add(new SongItem(record.getSong().getTitle(), record.getArtist().getName(), record.getSong().getId(), record.getRelease().getName()));
+				}			
+			}
+			
+			Gson gson = new Gson();
+			sb.append(gson.toJson(items.get(0)));
+
 			return sb.toString();
 		}
 	
