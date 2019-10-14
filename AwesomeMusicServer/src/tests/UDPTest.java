@@ -42,10 +42,10 @@ public class UDPTest {
         	
         	// Search the song library by song.id
         	// Returns a SongItem object ret : {SongItem}
-        	response = client.sendRequest("{\"remoteMethod\":\"searchForSongById\"," +
-						    			  "\"objectName\": \"SongLibraryServices\"," +
-						    			  "\"param\" : {\"searchParam\" : \"SOMMAMA12A8C13F9E7\"}" +
-						    			  "}");
+//        	response = client.sendRequest("{\"remoteMethod\":\"searchForSongById\"," +
+//						    			  "\"objectName\": \"SongLibraryServices\"," +
+//						    			  "\"param\" : {\"searchParam\" : \"SOMMAMA12A8C13F9E7\"}" +
+//						    			  "}");
         	
         	// Create a new Playlist
 //        	response = client.sendRequest("{\"remoteMethod\":\"createPlaylist\"," +
@@ -75,14 +75,14 @@ public class UDPTest {
 //									   					"\"userId\" : \"1\"} " +
 //									       "}");
         	
-        	// Delete a playlist
-//        	response = client.sendRequest("{\"remoteMethod\":\"getSongChunk\"," +
-//									   	   "\"objectName\": \"SongServices\"," +
-//									       "\"param\" : {\"song\" : " + 490183 + "," +
-//									   					"\"fragment\" : " + 1 + "} " +
-//									       "}");
+        	// Get Song Chunk
+        	response = client.sendRequest("{\"remoteMethod\":\"getSongChunk\"," +
+									   	   "\"objectName\": \"SongServices\"," +
+									       "\"param\" : {\"song\" : " + 490183 + "," +
+									   					"\"fragment\" : " + 3 + "} " +
+									       "}");
         	
-        	System.out.println("Response sent: \n" + response);
+        	System.out.println(response.length() + " Response sent: \n" + response);
         } catch (IOException e1) {
             // TODO Auto-generated catch block
             e1.printStackTrace();

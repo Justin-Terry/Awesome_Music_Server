@@ -52,14 +52,15 @@ public class Server extends Thread {
 			// Create an instance of the dispatcher and pass it the request
 			Dispatcher dis = new Dispatcher();
 			String returnString = dis.dispatch(new String(packet.getData()));
-			System.out.println(returnString.length() + " " + returnString);
 			// Add the returned string to the buffer
+			buf = new byte[returnString.getBytes().length];
 			buf = returnString.getBytes();
 			// Create the return packet
 			packet = new DatagramPacket(buf, buf.length, address, port);
 
 			try {
 				// Return the packet
+				System.out.println(packet.getLength());
 				socket.send(packet);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block

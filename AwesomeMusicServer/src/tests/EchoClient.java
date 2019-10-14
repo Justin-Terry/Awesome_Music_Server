@@ -30,7 +30,7 @@ public class EchoClient {
         DatagramPacket packet
                 = new DatagramPacket(buf, buf.length, address, 3000);
         socket.send(packet);
-        byte[] receive = new byte[2500];
+        byte[] receive = new byte[11000];
         packet = new DatagramPacket(receive, receive.length);
         socket.receive(packet);
         String received = new String(
