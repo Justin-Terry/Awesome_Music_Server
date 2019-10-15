@@ -11,6 +11,13 @@ import com.google.gson.stream.JsonReader;
 
 import models.Playlist;
 
+/**
+ * PlaylistServices Class
+ * 
+ * @author Justin
+ *
+ */
+
 public class PlaylistServices {
 	private static final String PLAYLISTS_PATH = "./src/resources/playlists.json";
 	private static ArrayList<Playlist> playlists;
@@ -20,7 +27,12 @@ public class PlaylistServices {
 		playlists = new ArrayList<Playlist>();
 		allPlaylists = new ArrayList<Playlist>();
 	}
-
+	
+	/**
+	 * Returns all the playlists associated with a userId
+	 * @param userId
+	 * @return all the playlists associated with a userId
+	 */
 	public String getPlaylists(String userId) {
 		try {
 			loadPlaylists(userId);
@@ -33,6 +45,11 @@ public class PlaylistServices {
 		return null;
 	}
 
+	/**
+	 * Loads all the playlists from JSON object
+	 * @param userId
+	 * @return all the playlists associated with a userId
+	 */
 	private void loadPlaylists(String userId) throws FileNotFoundException {
 		Gson gson1 = new Gson();
 		JsonReader pReader = new JsonReader(new FileReader(PLAYLISTS_PATH));

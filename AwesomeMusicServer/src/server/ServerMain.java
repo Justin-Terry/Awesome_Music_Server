@@ -1,5 +1,12 @@
 package server;
 
+/**
+ * Song Library Class
+ * 
+ * @author Justin
+ *
+ */
+
 public class ServerMain {
 
 	public static void main(String[] args) {
