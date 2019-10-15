@@ -28,7 +28,20 @@ public class SongServices
     * @param fragment: The chunk corresponds to 
     * [fragment * FRAGMENT_SIZE, FRAGMENT_SIZE]
     */
-    public String getSongChunk(Long key, Long fragment) throws FileNotFoundException, IOException
+//    public String getSongChunk(Long key, Long fragment) throws FileNotFoundException, IOException
+//    {
+//        byte buf[] = new byte[FRAGMENT_SIZE];
+//
+//        File file = new File("./src/resources/" + key);
+//        FileInputStream inputStream = new FileInputStream(file);
+//        inputStream.skip(fragment * FRAGMENT_SIZE);
+//        inputStream.read(buf);
+//        inputStream.close(); 
+//        // Encode in base64 so it can be transmitted 
+//         return Base64.getEncoder().encodeToString(buf);
+//    }
+    
+    public byte[] getSongChunk(Long key, Long fragment) throws FileNotFoundException, IOException
     {
         byte buf[] = new byte[FRAGMENT_SIZE];
 
@@ -38,19 +51,19 @@ public class SongServices
         inputStream.read(buf);
         inputStream.close(); 
         // Encode in base64 so it can be transmitted 
-         return Base64.getEncoder().encodeToString(buf);
+         return buf;
     }
     
     /* 
     * getFileSize: Gets a size of the file
     * @param key: Song ID. Each song has a unique ID 
      */
-    public Integer getFileSize(Long key) throws FileNotFoundException, IOException
+    public String getFileSize(Long key) throws FileNotFoundException, IOException
     {
         File file = new File("./" + key);        
-        Integer total =  (int)file.length();
-        
-        return total;
+        long total =  file.length();
+        System.out.println("test");
+        return Long.toString(total);
     }
     
 }
