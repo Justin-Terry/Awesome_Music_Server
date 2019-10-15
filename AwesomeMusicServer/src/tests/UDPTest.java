@@ -46,6 +46,13 @@ public class UDPTest {
 //						    			  "\"objectName\": \"SongLibraryServices\"," +
 //						    			  "\"param\" : {\"searchParam\" : \"SOMMAMA12A8C13F9E7\"}" +
 //						    			  "}");
+
+//        	
+//        	response = client.sendRequest("{\"remoteMethod\":\"getSongChunk\"," +
+//	    			  "\"objectName\": \"SongServices\"," +
+//	    			  "\"param\" : {\"key\" : \"490183\"," + 
+//	    			  "\"fragment\" : \"1\"}" +
+//	    			  "}");d
         	
         	// Create a new Playlist
 //        	response = client.sendRequest("{\"remoteMethod\":\"createPlaylist\"," +

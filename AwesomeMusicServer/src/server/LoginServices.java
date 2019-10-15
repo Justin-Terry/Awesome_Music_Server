@@ -50,7 +50,9 @@ public class LoginServices {
 	 * @return JSON User object in string form, or error string.
 	 */
 	public String signInUser(String email, String password) {
+		System.out.println("Email = " + email + "\nPassword = " + password);
 		for (int i = 0; i < users.length; i++) {
+			System.out.println(users[i].getEmail() + " " + users[i].getPassword());
 			if (users[i].getEmail().equals(email)) {
 				if (users[i].getPassword().equals(password)) {
 					Gson gson = new Gson();
