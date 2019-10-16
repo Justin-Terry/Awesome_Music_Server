@@ -18,7 +18,7 @@ public class SongLibraryServices {
 	
 	private static SongLibrary mSongLibrary;
 	
-		public SongLibraryServices() {
+		public SongLibraryServices() { 
 			mSongLibrary = SongLibrary.getInstance();
 		}
 		

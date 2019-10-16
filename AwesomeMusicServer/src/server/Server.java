@@ -47,7 +47,7 @@ public class Server extends Thread {
 
 			// Get some info from the packet for the return
 			InetAddress address = packet.getAddress();
-			int port = packet.getPort();
+			int port = packet.getPort(); 
 
 			// Create an instance of the dispatcher and pass it the request
 			Dispatcher dis = new Dispatcher();

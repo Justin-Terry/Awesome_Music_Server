@@ -35,6 +35,7 @@ public class Dispatcher implements DispatcherInterface {
 
 		try {
 			// Gets the class with the name = objectName
+			System.out.println("Request = " + jsonRequest.toString());
 			Class<?> c = Class.forName("server." + jsonRequest.get("objectName").getAsString());
 			// Creates an instance of that class
 			Object object = c.newInstance();
