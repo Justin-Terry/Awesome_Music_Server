@@ -54,7 +54,7 @@ public class Server extends Thread {
 			String returnString = dis.dispatch(new String(packet.getData()));
 			// Add the returned string to the buffer
 			buf = new byte[returnString.getBytes().length];
-			buf = returnString.getBytes();
+			buf = returnString.getBytes(); 
 			// Create the return packet
 			packet = new DatagramPacket(buf, buf.length, address, port);
 

@@ -60,9 +60,9 @@ public class SongServices
      */
     public String getFileSize(String key) throws FileNotFoundException, IOException
     {
-        File file = new File("./" + key);        
+        File file = new File("./src/resources/" + key);        
         long total =  file.length();
-        System.out.println("test");
+        System.out.println("file " + key + " has length " + total);
         return Long.toString(total);
     }
     
