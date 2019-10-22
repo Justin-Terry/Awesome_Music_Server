@@ -70,17 +70,21 @@ public class UDPTest {
 //     			  						   "}");
         	
         	// Get all playlists for a specific userId
-//        	response = client.sendRequest("{\"remoteMethod\":\"getPlaylists\"," +
-//			   							   "\"objectName\": \"PlaylistServices\"," +
-//			   							   "\"param\" : {\"userId\" : \"1\"} " +
-//			  							  "}");
+        	response = client.sendRequest("{\"remoteMethod\":\"getPlaylists\"," +
+			   							   "\"objectName\": \"PlaylistServices\"," +
+			   							   "\"param\" : {\"userId\" : \"1\"} " +
+			  							  "}");
+        	System.out.println(response.length() + " Response sent: \n" + response);
+
         	
 //        	// Delete a playlist
-//        	response = client.sendRequest("{\"remoteMethod\":\"removePlaylist\"," +
-//									   	   "\"objectName\": \"PlaylistServices\"," +
-//									       "\"param\" : {\"playlistname\" : \"Best Songs!\"," +
-//									   					"\"userId\" : \"1\"} " +
-//									       "}");
+        	response = client.sendRequest("{\"remoteMethod\":\"removePlaylist\"," +
+									   	   "\"objectName\": \"PlaylistServices\"," +
+									       "\"param\" : {\"playlistname\" : \"Best Songs!\"," +
+									   					"\"userId\" : \"1\"} " +
+									       "}");
+        	System.out.println(response.length() + " Response sent: \n" + response);
+
         	
         	// Get Song Chunk
         	response = client.sendRequest("{\"remoteMethod\":\"getSongChunk\"," +

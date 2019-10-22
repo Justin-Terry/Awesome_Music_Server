@@ -41,29 +41,11 @@ public class Server extends Thread {
 			try {
 				// Attempt to receive packet
 				socket.receive(packet);
+				// Pass packet to a runnable object
+				ServerThread thread = new ServerThread(packet, buf, socket);
+				// Create a new thread from the runnable and start it
+				new Thread(thread).start();
 			} catch (IOException e) {
-				e.printStackTrace();
-			}
-
-			// Get some info from the packet for the return
-			InetAddress address = packet.getAddress();
-			int port = packet.getPort(); 
-
-			// Create an instance of the dispatcher and pass it the request
-			Dispatcher dis = new Dispatcher();
-			String returnString = dis.dispatch(new String(packet.getData()));
-			// Add the returned string to the buffer
-			buf = new byte[returnString.getBytes().length];
-			buf = returnString.getBytes(); 
-			// Create the return packet
-			packet = new DatagramPacket(buf, buf.length, address, port);
-
-			try {
-				// Return the packet
-				System.out.println(packet.getLength());
-				socket.send(packet);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
