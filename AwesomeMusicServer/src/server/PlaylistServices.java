@@ -14,8 +14,8 @@ import models.Playlist;
 /**
  * PlaylistServices Class
  * 
- * @author Justin
- *
+ * @author Justin Terry
+ * 
  */
 
 public class PlaylistServices {

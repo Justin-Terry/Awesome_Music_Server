@@ -12,7 +12,8 @@ import models.User;
 
 /**
  * LoginServices Class
- * @author Justin
+ * @author Justin Terry
+ * 
  */
 
 public class LoginServices {

@@ -5,6 +5,11 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 
+/*
+ * @Author Justin Terry
+ *
+ */
+
 public class ServerThread implements Runnable{
 	private DatagramPacket packet;
 	private byte[] buf;
